@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Trabalho sobre JavaScript</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <style>
+            h1 {
+                text-align: center;
+                color: blueviolet;
+            }
+
+        </style>
+
+        <h1>Média/Trabalho JavaScript</h1>
+
+        <p id="cor">SITUAÇÃO</p>
+
+        <button onclick="calcular()">APERTE PARA CALCULAR A MÉDIA</button>
+       
+
+        <script>
+               function calcular () { 
+                var n1 = prompt ("Informe a primeira nota: ");
+                var n1 = parseFloat(n1);
+                var n2 = prompt ("Informe a segunda nota: ");
+                var n2 = parseFloat(n2)
+                var media = (Number(n1) + Number(n2)) /  2
+                
+                document.write ("A sua média é ", media);
+                
+                if (media >= 6) {
+                    document.getElementById('cor').innerHTML = 'Aprovado' ;
+                    document.getElementById('cor').style.color = "blue" ;  
+                } 
+            }            
+
+        </script>
+
+    
+    </body>
+</html>
