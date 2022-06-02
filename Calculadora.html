@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Trabalho sobre JavaScript</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <style>
+            h1 {
+                text-align: center;
+                color: #FF0000;
+            }
+
+            p#textomuda {
+                position: relative;
+            }
+
+            /*Espaço de formatação de divs*/
+
+            div#espacomedia {
+                width: 320px;
+                border: solid 5px;
+                text-align: center;
+            }
+
+            div#espacotitulo {
+                width: 1250x;
+                background-color: #00BFFF; 
+            }
+
+        </style>
+
+        <div id="espacotitulo">
+        <h1>Trabalho JavaScript</h1>
+        </div>
+
+        <div id="espacomedia">
+            <p id="textomuda"><span id="nome"></span><span id="situacao">, aperte no botão para calcular a média</span></p>
+        </div> 
+
+        <script>
+            var nome = prompt ("Qual seu nome?");
+            document.getElementById('nome').innerHTML = nome;
+        </script>
+
+        <br>
+
+        <button onclick="calcular()">APERTE PARA CALCULAR A MÉDIA</button>
+       
+
+        <script>
+               function calcular () { 
+                var n1 = prompt ("Informe a primeira nota: ");
+                var n1 = parseFloat(n1);
+                var n2 = prompt ("Informe a segunda nota: ");
+                var n2 = parseFloat(n2)
+                var media = ((n1) + (n2)) /  2
+                document.getElementById('situacao').innerHTML = media;
+                document.getElementById('nota1').innerHTML = n1;
+                document.getElementById('nota2').innerHTML = n2;
+                document.getElementById('notamedia').innerHTML = media;
+                
+                
+               
+                
+                if (media >= 6) {  
+                    document.getElementById('situacao').innerHTML = 'APROVADO';
+                    document.getElementById('situacao').style.color = 'blue' ;
+                    document.getElementById('espacomedia').style.width = '100px';
+                    document.getElementById('nome').innerHTML = '';
+
+                    
+                } else {
+                    document.getElementById('situacao').innerHTML = 'REPROVADO';
+                    document.getElementById('situacao').style.color = 'red';
+                    document.getElementById('espacomedia').style.width = '110px';
+                    document.getElementById('nome').innerHTML = '';
+
+                }
+            }            
+
+        </script>
+
+        <br><br>
+
+        <table style="text-align: center"; border=solid;>
+            <tr>
+                <td colspan="2">Suas Notas</td>
+            </tr>
+            <tr>
+                <th>Nota 1:</th>
+                <td><span id="nota1"></span></td>
+            </tr>
+            <tr>
+                <th>Nota 2:</th>
+                <td><span id="nota2"></span></td>
+            </tr>
+
+            <tr>
+                <th>Média</th>
+                <td><span id="notamedia"></span></td>
+            </tr>
+           
+        </table> 
+
+    
+    </body>
+</html>
